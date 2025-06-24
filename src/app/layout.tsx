@@ -30,9 +30,9 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <ParticlesContainer />
-          <div className="@container animate-appear flex flex-col md:flex-row justify-between px-8 max-w-5xl m-auto">
+          <div className="animate-appear flex flex-col md:flex-row justify-between px-8 max-w-5xl m-auto">
             <LeftNavigation />
-            <div className="max-w-xl flex-1 md:pt-32">{children}</div>
+            <main className="max-w-xl flex-1 md:pt-32">{children}</main>
           </div>
       </body>
     </html>
