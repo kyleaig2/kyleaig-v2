@@ -10,7 +10,6 @@ import {
   MusicalNoteIcon,
 } from "@heroicons/react/24/outline";
 import classnames from "classnames";
-import Link from "next/link";
 import useHashNavigation from "@/hooks/useHashScroll";
 
 const header = Spectral({
@@ -119,17 +118,6 @@ function Links() {
     <div className="flex flex-col gap-4 text-slate-600">
       {links.map((link) => {
         const linkHash = link.href.split("#")[1] || "";
-        if (link.route) {
-          return (
-            <Link
-              key={link.name}
-              href={link.href}
-              className="link uppercase text-sm w-fit"
-            >
-              {link.name}
-            </Link>
-          );
-        } else
           return (
             <a
               key={link.name}
