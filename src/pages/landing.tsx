@@ -30,11 +30,11 @@ export default function Landing() {
         </p>
         <br />
         <p>
-          I&apos;m especially drawn to projects that blend art, music, or
-          storytelling with tech. If you&apos;re doing work like that I&apos;d
-          love to contribute! In my free time, I&apos;m learning several
-          different ways to play Autumn Leaves on piano and perfecting my tennis
-          serve.
+          In my free time, I&apos;m learning several different ways to play
+          Autumn Leaves on piano and perfecting my tennis serve. I&apos;m
+          especially drawn to projects that blend art, music, or storytelling
+          with tech. If you&apos;re doing work like that I&apos;d love to
+          contribute!
         </p>
       </div>
     </section>
