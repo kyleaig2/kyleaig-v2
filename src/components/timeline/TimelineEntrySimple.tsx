@@ -43,7 +43,7 @@ function TimelineEntry({
         <div className="flex gap-2 items-center">
           <span className="font-semibold">{employer}</span>
           {employer_site && (
-            <Link href={employer_site} target="_blank">
+            <Link href={employer_site} aria-label={employer} target="_blank">
               <ArrowTopRightOnSquareIcon className="size-4" />
             </Link>
           )}
