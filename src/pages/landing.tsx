@@ -9,7 +9,9 @@ const inter = Inter({
 
 export default function Landing() {
   return (
-    <div className={`${inter.className} text-md flex justify-center mb-16`}>
+    <section
+      className={`${inter.className} text-md flex flex-col justify-center mb-16`}
+    >
       {/* <LandingHero /> */}
       <div className="text-justify text-zinc-600">
         <p>
@@ -21,18 +23,20 @@ export default function Landing() {
         </p>
         <br />
         <p>
-          What drives me is the space where code meets creativity. Whether it&apos;s
-          creating powerful interfaces or architecting infrastructure behind to
-          power it behind the scenes, I aim to build tools that resonate — both
-          functionally and emotionally.
+          What drives me is the space where code meets creativity. Whether
+          it&apos;s creating powerful interfaces or architecting infrastructure
+          behind to power it behind the scenes, I aim to build tools that
+          resonate — both functionally and emotionally.
         </p>
         <br />
         <p>
           I&apos;m especially drawn to projects that blend art, music, or
-          storytelling with tech. If you&apos;re doing work like that I&apos;d love to
-          contribute!
+          storytelling with tech. If you&apos;re doing work like that I&apos;d
+          love to contribute! In my free time, I&apos;m learning several
+          different ways to play Autumn Leaves on piano and perfecting my tennis
+          serve.
         </p>
       </div>
-    </div>
+    </section>
   );
 }
