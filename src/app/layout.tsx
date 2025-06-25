@@ -32,7 +32,7 @@ export default function RootLayout({
         <ParticlesContainer />
           <div className="animate-appear flex flex-col md:flex-row justify-between px-8 max-w-5xl m-auto">
             <LeftNavigation />
-            <main className="max-w-xl flex-1 md:pt-32">{children}</main>
+            <main role="main" className="max-w-xl flex-1 md:pt-32">{children}</main>
           </div>
       </body>
     </html>

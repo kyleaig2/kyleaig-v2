@@ -25,13 +25,17 @@ const subheader = Spectral({
 function Hero() {
   return (
     <div className="mb-24 animate-appear">
-      <div className={`${header.className} text-3xl text-zinc-800`}>Kyle Aig-Imoukhuede</div>
-      <div className="flex items-center gap-2 mb-2">
-        <div className={`${subheader.className} text-2xl text-slate-800`}>
-          Full Stack Developer
+      <header role="banner">
+        <div className={`${header.className} text-3xl text-zinc-800`}>
+          Kyle Aig-Imoukhuede
         </div>
-        <CodeBracketIcon className="size-5 text-black animate-pulse" />
-      </div>
+        <div className="flex items-center gap-2 mb-2">
+          <div className={`${subheader.className} text-2xl text-slate-800`}>
+            Full Stack Developer
+          </div>
+          <CodeBracketIcon className="size-5 text-black animate-pulse" />
+        </div>
+      </header>
       <Contact />
     </div>
   );
@@ -115,7 +119,7 @@ function Links() {
   ];
 
   return (
-    <div className="flex flex-col gap-4 text-slate-600">
+    <nav role="navigation" className="flex flex-col gap-4 text-slate-600">
       {links.map((link) => {
         const linkHash = link.href.split("#")[1] || "";
           return (
@@ -133,15 +137,15 @@ function Links() {
             </a>
           );
       })}
-    </div>
+    </nav>
   );
 }
 
 export default function LeftNavigation() {
   return (
-    <header className="md:h-screen md:pt-32 md:sticky md:top-0">
+    <div className="md:h-screen md:pt-32 md:sticky md:top-0">
       <Hero />
       <Links />
-    </header>
+    </div>
   );
 }
