@@ -2,7 +2,7 @@
 
 import Particles, { initParticlesEngine } from "@tsparticles/react";
 import { loadSlim } from "@tsparticles/slim";
-import type { Container } from "@tsparticles/engine";
+// import type { Container } from "@tsparticles/engine";
 import { useState, useEffect } from "react";
 
 export default function ParticlesContainer() {
@@ -16,15 +16,15 @@ export default function ParticlesContainer() {
     });
   });
 
-  const particlesLoaded = async (container?: Container) => {
-    console.log(container);
-  };
+  // const particlesLoaded = async (container?: Container) => {
+  //   console.log(container);
+  // };
 
   return (
     init && (
       <Particles
         id="tsparticles"
-        particlesLoaded={particlesLoaded}
+        // particlesLoaded={particlesLoaded}
         url="/assets/particles.json"
       />
     )

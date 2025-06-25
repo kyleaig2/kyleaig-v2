@@ -17,6 +17,7 @@ function Timeline() {
       <TimelineEntry {...example}></TimelineEntry>
       <TimelineEntry {...example}></TimelineEntry>
       <TimelineEntry {...example}></TimelineEntry>
+      <TimelineEntry {...example}></TimelineEntry>
     </div>
   );
 }
