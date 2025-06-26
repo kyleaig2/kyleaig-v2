@@ -3,13 +3,11 @@ import { Inter } from "next/font/google";
 import Link from "next/link";
 import React from "react";
 
-export interface TimelineEntryProps {
+export interface ProjectEntryProps {
   years: [number, number];
   title: string;
-  employer: string;
-  employer_site?: string;
+  link?: string;
   description: string;
-  location?: string;
   tags?: string[];
 }
 
@@ -18,20 +16,16 @@ const inter = Inter({
   subsets: ["latin"],
 })
 
-function TimelineEntry({
+function ProjectEntry({
   title,
   years,
-  employer,
-  employer_site,
+  link,
   description,
   tags
-}: TimelineEntryProps) {
-
-  const tl_point_classes = "after:absolute after:w-4 after:h-4 after:bg-zinc-800 after:-left-11.5 after:rotate-45";
-  const more = "last:before:absolute last:before:w-4 last:before:h-4 last:before:bg-zinc-800 last:before:-left-11.5 last:before:top-full last:before:rotate-45 last:before-top-5";
+}: ProjectEntryProps) {
 
   return (
-    <div className={`${inter.className} hover:bg-zinc-200/70 bg-zinc-200/30 hover:shadow-lg transition-all max-w-2xl relative flex flex-col text-sm ${tl_point_classes} ${more}`}>
+    <div className={`${inter.className} hover:bg-zinc-200/70 bg-zinc-200/30 hover:shadow-lg transition-all max-w-2xl relative flex flex-col text-sm`}>
       {/* Header*/}
       <div className="flex justify-between text-zinc-600 px-7 pt-5 items-start">
         <div className="flex flex-col">
@@ -41,16 +35,18 @@ function TimelineEntry({
           </span>
         </div>
         <div className="flex gap-2 items-center">
-          <span className="font-semibold">{employer}</span>
-          {employer_site && (
-            <Link href={employer_site} aria-label={employer} target="_blank">
+          {/* <span className="font-semibold">{employer}</span> */}
+          {link && (
+            <Link href={link} aria-label={title} target="_blank">
               <ArrowTopRightOnSquareIcon className="size-4" />
             </Link>
           )}
         </div>
       </div>
       {/* Body */}
-      <div className="px-7 py-5">{description}</div>
+      <div className="flex px-7 py-5 gap-4">
+        <div className="w-20 h-20 bg-slate-500" />
+        <div className="flex-1">{description}</div></div>
       {/* Footer */}
       {tags && (<div className="px-7 pt-5 pb-5">
         <div className="flex gap-2">
@@ -67,4 +63,4 @@ function TimelineEntry({
   );
 }
 
-export default TimelineEntry;
+export default ProjectEntry;

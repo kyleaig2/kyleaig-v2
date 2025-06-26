@@ -10,10 +10,10 @@ const inter = Inter({
 export default function Work() {
   return (
     <section id="work" className={`${inter.className} py-10 text-md text-zinc-600`}>
-      <div>
+      {/* <div>
         <p>Here are some of the projects I&apos;ve worked on</p>
-      </div>
-      <div className="w-fit flex items-center justify-center">
+      </div> */}
+      <div className="w-fit flex items-center justify-center mb-20">
         <Timeline />
       </div>
     </section>
