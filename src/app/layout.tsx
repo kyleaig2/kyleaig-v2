@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import ParticlesContainer from "@/components/Particles";
-import LeftNavigation from "@/components/LeftNavigation";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -29,11 +27,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <ParticlesContainer />
-          <div className="animate-appear flex flex-col md:flex-row justify-between px-8 max-w-5xl m-auto">
-            <LeftNavigation />
-            <main role="main" className="max-w-xl flex-1 md:pt-32">{children}</main>
-          </div>
+        {children}
       </body>
     </html>
   );

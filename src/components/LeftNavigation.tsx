@@ -89,7 +89,7 @@ function Links() {
   const links = [
     {
       name: "Home",
-      href: "/#",
+      hash: "",
     },
     // {
     //   name: "About",
@@ -97,39 +97,37 @@ function Links() {
     // },
     {
       name: "Work",
-      href: "/#work",
+      hash: "work",
     },
     {
       name: "Projects",
-      href: "/#projects",
+      hash: "projects",
     },
-    {
-      name: "Gallery",
-      href: "/#gallery",
-    },
+    // {
+    //   name: "Gallery",
+    //   hash: "gallery",
+    // },
     // {
     //   name: "Contact",
     //   href: "/contact",
     // },
-    // {
-    //   name: "Blog",
-    //   href: "/blog",
-    //   route: true,
-    // },
+    {
+      name: "Blog",
+      href: "/blog",
+    },
   ];
 
   return (
     <nav role="navigation" className="flex flex-col gap-4 text-slate-600">
       {links.map((link) => {
-        const linkHash = link.href.split("#")[1] || "";
           return (
             <a
               key={link.name}
-              href={link.href}
+              href={link.href || `#${link.hash}`}
               className={classnames(
                 "nav-link uppercase text-sm w-fit cursor-pointer",
                 {
-                  active: activeHash === linkHash,
+                  active: activeHash === link.hash,
                 }
               )}
             >
