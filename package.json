@@ -10,13 +10,17 @@
   },
   "dependencies": {
     "@heroicons/react": "^2.2.0",
+    "@react-three/fiber": "^9.1.4",
     "@tsparticles/engine": "^3.8.1",
     "@tsparticles/react": "^3.0.0",
     "@tsparticles/slim": "^3.8.1",
+    "@types/three": "^0.178.0",
     "classnames": "^2.5.1",
     "next": "15.3.2",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "react-dom": "^19.0.0",
+    "simplex-noise": "^4.0.3",
+    "three": "^0.178.0"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",

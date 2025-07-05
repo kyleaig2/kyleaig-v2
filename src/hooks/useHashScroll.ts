@@ -25,7 +25,6 @@ export default function useHashNavigation() {
         entries.forEach((entry) => {
           if (entry.intersectionRatio >= 0.5) {
             const id = entry.target.getAttribute("id") ?? "";
-            console.log(id, entry.intersectionRatio);
             // window.history.replaceState(null, "", `#${id}`);
             setActiveHash(id);
           }

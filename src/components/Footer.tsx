@@ -8,9 +8,9 @@ const inter = Inter({
 
 function Footer() {
   const footer = (
-    <div>
+    <div className="relative before:bg-slate-300 before:w-1 hover:before:bg-slate-400 before:transition before:duration-300 before:absolute before:-left-2 pl-2 before:h-full my-12">
       Inspired by Brittany Chiang&apos;s{" "}
-      <a href="https://brittanychiang.com">v3 Website</a>. <br /> Developed with
+      <a href="https://brittanychiang.com">v3 Website</a>. <br /> Developed in
       Next.js and designed in Figma by me
     </div>
   );
