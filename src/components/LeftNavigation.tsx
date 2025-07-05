@@ -111,10 +111,10 @@ function Links() {
     //   name: "Contact",
     //   href: "/contact",
     // },
-    {
-      name: "Blog",
-      href: "/blog",
-    },
+    // {
+    //   name: "Blog",
+    //   href: "/blog",
+    // },
   ];
 
   return (
