@@ -1,11 +1,19 @@
 "use client";
 
+import { sendPageView } from "@/utils/analytics";
 import { useEffect, useRef, useState } from "react";
 
 export default function useHashNavigation() {
   const [activeHash, setActiveHash] = useState("");
 
   const observer = useRef<IntersectionObserver | undefined>(undefined);
+
+  /**
+   * Google Analytics Page View Capture
+   */
+  useEffect(() => {
+    sendPageView(activeHash || "landing");
+  }, [activeHash]);
 
   useEffect(() => {
     const updateHash = () => {
@@ -25,7 +33,6 @@ export default function useHashNavigation() {
         entries.forEach((entry) => {
           if (entry.intersectionRatio >= 0.5) {
             const id = entry.target.getAttribute("id") ?? "";
-            // window.history.replaceState(null, "", `#${id}`);
             setActiveHash(id);
           }
         });
