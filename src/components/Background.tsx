@@ -1,12 +1,12 @@
 import { Canvas, useFrame, useLoader } from "@react-three/fiber";
 import React, { useMemo } from "react";
-import { Color, PlaneGeometry, TextureLoader } from "three";
+import { Color, PlaneGeometry, Points, TextureLoader } from "three";
 import { createNoise3D } from "simplex-noise";
 
 function ParticleGrid() {
   const circleTexture = useLoader(TextureLoader, '/assets/circle.png');
 
-  const pointsRef = React.useRef(null);
+  const pointsRef = React.useRef<Points>(null);
   const [positions, originalPositions, colors, noise3d, lowColor, highColor] = useMemo(() => {
     const geo = new PlaneGeometry(100, 100, 300, 300);
     const pos = geo.attributes.position.array.slice(); // Float32Array
