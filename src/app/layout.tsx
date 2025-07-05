@@ -18,6 +18,8 @@ export const metadata: Metadata = {
   description: "Kyle Aig-Imoukhuede: Full Stack Developer",
 };
 
+const GA_ID = process.env.GA_ID ?? "";
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -25,7 +27,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <GoogleAnalytics gaId="G-433K2G324W" />
+      {process.env.NODE_ENV !== "development" && <GoogleAnalytics gaId={GA_ID} />}
       <body
         className={`${geistSans.variable} ${geistMono.variable} relative antialiased`}
       >
