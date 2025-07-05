@@ -13,7 +13,7 @@ export default function Work() {
       {/* <div>
         <p>Here are some of the projects I&apos;ve worked on</p>
       </div> */}
-      <div className="w-fit flex items-center justify-center mb-20">
+      <div className="max-w-full items-center justify-center mb-20">
         <Timeline />
       </div>
     </section>

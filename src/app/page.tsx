@@ -19,9 +19,9 @@ export default function Home() {
     <Suspense fallback={null}>
       {/* <ParticlesContainer /> */}
       <Background />
-      <div className="animate-appear flex flex-col md:flex-row justify-between px-8 max-w-5xl m-auto">
+      <div className="animate-appear flex flex-col md:flex-row justify-between px-8 md:px-12 gap-8 max-w-5xl m-auto">
         <LeftNavigation />
-        <main role="main" className="max-w-xl flex-1 md:pt-32">
+        <main role="main" className="flex-1 md:pt-32 w-full">
           <Landing />
           <Work />
           <Projects />

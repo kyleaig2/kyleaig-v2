@@ -51,7 +51,7 @@ function TimelineEntry({
       <div className="p-8 bg-zinc-200">{description}</div>
       {/* Footer */}
       {tags && (<div className="px-8 pb-8 bg-zinc-200">
-        <div className="flex gap-2">
+        <div className="flex gap-2 flex-wrap">
           {tags.map(
             (tag) => (
               <span key={tag} className="bg-zinc-800 font-bold text-slate-50 px-2 py-1">

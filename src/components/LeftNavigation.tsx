@@ -24,9 +24,9 @@ const subheader = Spectral({
 
 function Hero() {
   return (
-    <div className="mb-24 animate-appear">
+    <div className="max-md:mt-24 max-md:mb-8 md:mb-24 animate-appear">
       <header role="banner">
-        <div className={`${header.className} text-3xl text-zinc-800`}>
+        <div className={`${header.className} text-2xl lg:text-3xl text-zinc-800`}>
           Kyle Aig-Imoukhuede
         </div>
         <div className="flex items-center gap-2 mb-2">
@@ -118,7 +118,7 @@ function Links() {
   ];
 
   return (
-    <nav role="navigation" className="flex flex-col gap-4 text-slate-600">
+    <nav role="navigation" className="flex flex-col gap-4 text-slate-600 max-md:hidden">
       {links.map((link) => {
           return (
             <a
