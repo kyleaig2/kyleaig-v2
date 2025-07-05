@@ -123,7 +123,8 @@ function Links() {
           return (
             <a
               key={link.name}
-              href={link.href || `#${link.hash}`}
+              // href={link.href || `#${link.hash}`}
+              href={`#${link.hash}`}
               className={classnames(
                 "nav-link uppercase text-sm w-fit cursor-pointer",
                 {
