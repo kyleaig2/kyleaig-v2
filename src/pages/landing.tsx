@@ -10,7 +10,7 @@ const inter = Inter({
 export default function Landing() {
   return (
     <section
-      className={`${inter.className} text-md flex flex-col justify-center mb-16`}
+      className={`${inter.className} text-md max-md:text-sm flex flex-col justify-center mb-16`}
     >
       {/* <LandingHero /> */}
       <div className="text-justify text-zinc-600">
