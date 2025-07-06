@@ -12,7 +12,7 @@ export default function useHashNavigation() {
    * Google Analytics Page View Capture
    */
   useEffect(() => {
-    sendPageView(activeHash || "landing");
+    sendPageView(activeHash);
   }, [activeHash]);
 
   useEffect(() => {
