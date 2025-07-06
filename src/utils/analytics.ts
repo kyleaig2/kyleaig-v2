@@ -1,5 +1,10 @@
-import { sendGAEvent } from "@next/third-parties/google"
+import { sendGAEvent } from "@next/third-parties/google";
 
 export const sendPageView = (page: string) => {
-    sendGAEvent('event', 'pageview', { value: page });
-}
+  const p = page || "landing";
+
+  sendGAEvent("event", "page_view", {
+    page_title: p,
+    page_path: `/#${p}`,
+  });
+};
