@@ -31,13 +31,13 @@ export default function useHashNavigation() {
     observer.current = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
-          if (entry.intersectionRatio >= 0.5) {
+          if (entry.intersectionRatio >= 0.4) {
             const id = entry.target.getAttribute("id") ?? "";
             setActiveHash(id);
           }
         });
       },
-      { threshold: 0.5 }
+      { threshold: 0.4 }
     );
 
     elements?.forEach((e) => observer.current?.observe(e));
