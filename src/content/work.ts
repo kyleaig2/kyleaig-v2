@@ -62,7 +62,7 @@ export const work_timeline: TimelineEntryProps[] = [
     id: "telecom_project_search",
     years: 2023,
     title: "Backend Engineer",
-    employer: "Unnamed Telecom",
+    employer: "Unnamed Telecom Company",
     description:
       "Backend contributor for telecom’s GIS project search, synchronizing across databases and expanding data discovery and ease of use for field engineers and planners.",
     location: "Remote",
@@ -87,9 +87,9 @@ export const work_timeline: TimelineEntryProps[] = [
     id: "isp",
     years: 2024,
     title: "Software Engineer",
-    employer: "Unnamed Telecom",
+    employer: "Unnamed Telecom Company",
     description:
-      "Developer and architect for real-time backend solution for capturing and processing nationwide device telemetry data for telecom client.",
+      "Developer and co-architect for real-time backend solution capturing and processing nationwide device telemetry data for ISP department.",
     location: "Remote",
     tags: [
       "AWS", "Mapbox GL", "Postgres"
