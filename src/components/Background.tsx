@@ -11,8 +11,8 @@ function ParticleGrid() {
     const geo = new PlaneGeometry(100, 100, 300, 300);
     const pos = geo.attributes.position.array.slice(); // Float32Array
     const colorArray = new Float32Array(pos.length);
-    const hCol = new Color(0x94a3b8);
-    const lCol = new Color(0xeeeeee);
+    const hCol = new Color(0xeeeeee);
+    const lCol = new Color(0xffffff);
 
     const n = createNoise3D();
 
