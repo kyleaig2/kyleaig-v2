@@ -74,7 +74,7 @@ function ParticleGrid() {
 
 function Background() {
   return (
-    <div className="fixed top-0 left-0 w-full h-full animate-appear -z-10">
+    <div className="fixed top-0 left-0 w-full h-full animate-appear -z-10 max-md:hidden">
       <Canvas camera={{ position: [0, 60, 0], fov: 100 }}>
         <ParticleGrid />
       </Canvas>

@@ -13,7 +13,7 @@ export default function Landing() {
       className={`${inter.className} text-md max-md:text-sm flex flex-col justify-center mb-16`}
     >
       {/* <LandingHero /> */}
-      <div className="text-justify text-zinc-600">
+      <div className="text-justify text-zinc-600 dark:text-zinc-200">
         <p>
           I earned my B.S. in Computer Science from the University of Georgia,
           with a minor in Music Performance. Since then, I&apos;ve explored the
