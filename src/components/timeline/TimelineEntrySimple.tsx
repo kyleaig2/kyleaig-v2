@@ -29,20 +29,20 @@ function TimelineEntry({
 // }: TimelineEntryProps & { focused: boolean }) {
 }: TimelineEntryProps) {
 
-  const tl_point_classes = "after:absolute after:w-4 after:h-4 after:bg-zinc-800 after:-left-11.5 after:rotate-45";
-  const more = "last:before:absolute last:before:w-4 last:before:h-4 last:before:bg-zinc-800 last:before:-left-11.5 last:before:top-full last:before:rotate-45 last:before-top-5";
+  const tl_point_classes = "after:absolute after:w-4 after:h-4 after:bg-zinc-800 dark:after:bg-zinc-300 after:-left-11.5 after:rotate-45";
+  const more = "last:before:absolute last:before:w-4 last:before:h-4 last:before:bg-zinc-800 dark:last:before:bg-zinc-300 last:before:-left-11.5 last:before:top-full last:before:rotate-45 last:before-top-5";
 
   const yearInfo = Array.isArray(years) ? `${years[0]} - ${years[1]}` : years;
 
   return (
     <div
-      className={`${inter.className} hover:bg-zinc-200/70 bg-zinc-200/30 hover:shadow-lg transition-all max-w-2xl relative flex flex-col text-sm ${tl_point_classes} ${more}`}
+      className={`${inter.className} hover:bg-zinc-200/70 dark:hover:bg-zinc-900/80 bg-zinc-200/30 dark:bg-zinc-900/30 hover:shadow-lg transition-all max-w-2xl relative flex flex-col text-sm ${tl_point_classes} ${more}`}
     >
       {/* Header*/}
-      <div className="flex justify-between text-zinc-600 px-7 pt-5 items-start">
+      <div className="flex justify-between text-zinc-600 dark:text-zinc-200 px-7 pt-5 items-start">
         <div className="flex flex-col">
           <span className="font-bold">{title}</span>
-          <span className="text-zinc-700">{yearInfo}</span>
+          <span className="text-zinc-700 dark:text-zinc-300">{yearInfo}</span>
         </div>
           {employer_site ? (
             <Link href={employer_site} aria-label={employer} target="_blank" className="flex gap-2 items-center">
@@ -54,7 +54,7 @@ function TimelineEntry({
           )}
       </div>
       {/* Body */}
-      <div className="px-7 py-5">{description}</div>
+      <div className="px-7 py-5 dark:text-zinc-300">{description}</div>
       {/* Footer */}
       {tags && (
         <div className="px-7 pt-5 pb-5">
@@ -62,7 +62,7 @@ function TimelineEntry({
             {tags.map((tag) => (
               <span
                 key={tag}
-                className="text-xs bg-zinc-300/50 font-bold text-zinc-500 px-3 py-1 rounded-full"
+                className="text-xs bg-zinc-300/50 dark:bg-zinc-800/50 font-bold text-zinc-500 dark:text-zinc-400 px-3 py-1 rounded-full"
               >
                 {tag}
               </span>

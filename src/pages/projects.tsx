@@ -14,7 +14,7 @@ export default function Projects() {
   };
 
   return (
-    <section id="projects" className="flex items-center justify-center">
+    <section id="projects" className="flex items-center justify-center py-10">
       <div className="w-fit max-w-full flex flex-col gap-20">
         <ProjectEntry {...example} />
         <ProjectEntry {...example} />
