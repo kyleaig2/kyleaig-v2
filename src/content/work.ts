@@ -1,6 +1,6 @@
-import { TimelineEntryProps } from "@/components/timeline/TimelineEntrySimple";
+import { ITimelineEntry } from "@/components/timeline/TimelineCard";
 
-export const work_timeline: TimelineEntryProps[] = [
+export const work_timeline: ITimelineEntry[] = [
   {
     id: "agriadapt",
     years: [2021, 2022],

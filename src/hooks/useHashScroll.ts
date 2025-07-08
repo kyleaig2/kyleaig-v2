@@ -12,7 +12,8 @@ export default function useHashNavigation() {
    * Google Analytics Page View Capture
    */
   useEffect(() => {
-    sendPageView(activeHash);
+    if (process.env.NODE_ENV === "production")
+      sendPageView(activeHash);
   }, [activeHash]);
 
   useEffect(() => {
@@ -31,13 +32,13 @@ export default function useHashNavigation() {
     observer.current = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
-          if (entry.intersectionRatio >= 0.4) {
+          if (entry.intersectionRatio >= 0.3) {
             const id = entry.target.getAttribute("id") ?? "";
             setActiveHash(id);
           }
         });
       },
-      { threshold: 0.4 }
+      { threshold: 0.3 }
     );
 
     elements?.forEach((e) => observer.current?.observe(e));

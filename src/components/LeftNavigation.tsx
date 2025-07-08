@@ -30,10 +30,10 @@ function Hero() {
           Kyle Aig-Imoukhuede
         </div>
         <div className="flex items-center gap-2 mb-2">
-          <div className={`${subheader.className} text-2xl text-slate-800 dark:text-slate-200`}>
+          <div className={`${subheader.className} text-2xl text-slate-800 dark:text-zinc-200`}>
             Full Stack Developer
           </div>
-          <CodeBracketIcon className="size-5 text-black animate-pulse dark:text-slate-200" />
+          <CodeBracketIcon className="size-5 text-black animate-pulse dark:text-indigo-300" />
         </div>
       </header>
       <Contact />
@@ -76,7 +76,7 @@ function Contact() {
         >
           <social.icon
             aria-label={social.name}
-            className="size-5 text-slate-600 dark:text-slate-200 link"
+            className="size-5 text-slate-600 dark:text-indigo-300 link"
           />
         </a>
       ))}
@@ -118,7 +118,7 @@ function Links() {
   ];
 
   return (
-    <nav role="navigation" className="flex flex-col gap-4 text-slate-600 dark:text-slate-200 max-md:hidden">
+    <nav role="navigation" className="flex flex-col gap-4 text-slate-600 dark:text-zinc-200 max-md:hidden">
       {links.map((link) => {
           return (
             <a
