@@ -2,6 +2,7 @@ import { ArrowTopRightOnSquareIcon } from "@heroicons/react/24/solid";
 import { Inter } from "next/font/google";
 import Link from "next/link";
 import React from "react";
+import CardTag from "../CardTag";
 
 export interface ProjectEntryProps {
   years: [number, number];
@@ -25,7 +26,9 @@ function ProjectEntry({
 }: ProjectEntryProps) {
 
   return (
-    <div className={`${inter.className} hover:bg-zinc-200/70 dark:hover:bg-zinc-900/80 bg-zinc-200/30 hover:shadow-lg dark:bg-zinc-900/30 transition-all max-w-2xl relative flex flex-col text-sm`}>
+    <div
+      className={`${inter.className} hover:bg-zinc-200/70 dark:hover:bg-zinc-900/80 bg-zinc-200/30 hover:shadow-lg dark:bg-zinc-900/30 transition-all max-w-2xl relative flex flex-col text-sm`}
+    >
       {/* Header*/}
       <div className="flex justify-between text-zinc-600 dark:text-zinc-200 px-7 pt-5 items-start">
         <div className="flex flex-col">
@@ -38,27 +41,26 @@ function ProjectEntry({
           {/* <span className="font-semibold">{employer}</span> */}
           {link && (
             <Link href={link} aria-label={title} target="_blank">
-              <ArrowTopRightOnSquareIcon className="size-4" />
+              <ArrowTopRightOnSquareIcon className="size-4 dark:text-indigo-300" />
             </Link>
           )}
         </div>
       </div>
       {/* Body */}
       <div className="flex px-7 py-5 gap-4">
-        <div className="w-20 h-20 bg-slate-500" />
-        <div className="flex-1 dark:text-zinc-300">{description}</div></div>
+        <div className="w-20 h-20 bg-slate-500 dark:bg-indigo-400/50" />
+        <div className="flex-1 dark:text-zinc-300">{description}</div>
+      </div>
       {/* Footer */}
-      {tags && (<div className="px-7 pt-5 pb-5">
-        <div className="flex gap-2 flex-wrap">
-          {tags.map(
-            (tag) => (
-              <span key={tag} className="text-xs bg-zinc-300/50 dark:bg-zinc-800/50 font-bold text-zinc-500 dark:text-zinc-400 px-3 py-1 rounded-full">
-                {tag}
-              </span>
-            )
-          )}
+      {tags && (
+        <div className="px-7 pt-5 pb-5">
+          <div className="flex gap-2 flex-wrap">
+            {tags.map((tag) => (
+              <CardTag key={`${title}-${tag}`} tag={tag} />
+            ))}
+          </div>
         </div>
-      </div>)}
+      )}
     </div>
   );
 }

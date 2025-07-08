@@ -10,7 +10,7 @@ const inter = Inter({
 
 export default function Work() {
   return (
-    <section id="work" className={`${inter.className} py-10 text-md text-zinc-600`}>
+    <section id="work" className={`${inter.className} py-10 text-md`}>
       <div className="max-w-full items-center justify-center mb-20">
         <Timeline entries={work_timeline} />
       </div>
