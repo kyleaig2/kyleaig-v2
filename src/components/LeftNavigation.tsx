@@ -50,7 +50,7 @@ function Contact() {
     },
     {
       name: "Email",
-      href: "mailto:kyle.o.aig@gmail.com",
+      href: "mailto:hey@kyleaig.com",
       icon: EnvelopeIcon,
     },
     {
