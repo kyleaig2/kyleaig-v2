@@ -37,6 +37,7 @@ export const work_timeline: ITimelineEntry[] = [
       "Redux",
       "Mapbox GL",
       "Postgres",
+      "Docker"
     ],
   },
   {
@@ -77,10 +78,10 @@ export const work_timeline: ITimelineEntry[] = [
     employer: "The Hub",
     employer_site: "https://www.nature.org/",
     description:
-      "Lead developer migrating infrastructure in data for TNC’s proprietary hub platform from Azure to AWS.",
+      "Lead developer migrating infrastructure in data for TNC’s proprietary hub platform from Azure to AWS in a highly available and scalable solution.",
     location: "Remote",
     tags: [
-      "AWS", "Azure", "Angular"
+      "AWS", "Azure", "Terraform", "Angular", ".NET", "Docker"
     ],
   },
   {
@@ -92,7 +93,7 @@ export const work_timeline: ITimelineEntry[] = [
       "Developer and co-architect for real-time backend solution capturing and processing nationwide device telemetry data for ISP department.",
     location: "Remote",
     tags: [
-      "AWS", "Mapbox GL", "Postgres"
+      "AWS", "Terraform", "Mapbox GL", "Postgres"
     ],
   },
   {
@@ -105,7 +106,7 @@ export const work_timeline: ITimelineEntry[] = [
       "Contributor for social platform to connect women and gender-diverse scientists worldwide.",
     location: "Remote",
     tags: [
-      "React", "AWS", "Sass", "Mapbox GL", "Postgres"
+      "React", "AWS", "Sass", "Mapbox GL", "Postgres", "Docker"
     ],
   },
 ];
