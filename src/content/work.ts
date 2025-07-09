@@ -37,7 +37,7 @@ export const work_timeline: ITimelineEntry[] = [
       "Redux",
       "Mapbox GL",
       "Postgres",
-      "Docker"
+      "Docker",
     ],
   },
   {
@@ -67,9 +67,7 @@ export const work_timeline: ITimelineEntry[] = [
     description:
       "Backend contributor for telecom’s GIS project search, synchronizing across databases and expanding data discovery and ease of use for field engineers and planners.",
     location: "Remote",
-    tags: [
-      "MongoDB", "OpenSearch", "AWS", "Redis"
-    ],
+    tags: ["MongoDB", "OpenSearch", "AWS", "Redis"],
   },
   {
     id: "the_hub",
@@ -80,9 +78,7 @@ export const work_timeline: ITimelineEntry[] = [
     description:
       "Lead developer migrating infrastructure in data for TNC’s proprietary hub platform from Azure to AWS in a highly available and scalable solution.",
     location: "Remote",
-    tags: [
-      "AWS", "Azure", "Terraform", "Angular", ".NET", "Docker"
-    ],
+    tags: ["AWS", "Azure", "Terraform", "Angular", ".NET", "Docker"],
   },
   {
     id: "isp",
@@ -92,9 +88,7 @@ export const work_timeline: ITimelineEntry[] = [
     description:
       "Developer and co-architect for real-time backend solution capturing and processing nationwide device telemetry data for ISP department.",
     location: "Remote",
-    tags: [
-      "AWS", "Terraform", "Mapbox GL", "Postgres"
-    ],
+    tags: ["AWS", "Terraform", "NestJS", "Python", "Postgres", "Mapbox GL"],
   },
   {
     id: "orca",
@@ -105,8 +99,6 @@ export const work_timeline: ITimelineEntry[] = [
     description:
       "Contributor for social platform to connect women and gender-diverse scientists worldwide.",
     location: "Remote",
-    tags: [
-      "React", "AWS", "Sass", "Mapbox GL", "Postgres", "Docker"
-    ],
+    tags: ["React", "AWS", "Sass", "Mapbox GL", "Postgres", "Docker"],
   },
 ];
