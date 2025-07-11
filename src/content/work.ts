@@ -8,7 +8,7 @@ export const work_timeline: ITimelineEntry[] = [
     employer: "AgriAdapt",
     employer_site: "https://agriadapt.org",
     description:
-      "Led development of agricultural tool for crop stakeholders to mitigate climate risk in their region for the World Resources Institute.",
+      "Led development of an agricultural web tool with the goal of helping stakeholders mitigate climate hazard risk to crops in their region for the World Resources Institute.",
     location: "Remote",
     tags: [
       "Next.js",
@@ -27,7 +27,7 @@ export const work_timeline: ITimelineEntry[] = [
     employer: "Gage Platform",
     employer_site: "https://gage.500womenscientists.org",
     description:
-      "Contributor for social platform to connect women and gender-diverse scientists worldwide.",
+      "Contributor for a social platform developed to connect women and gender-diverse in STEMM worldwide for work, research, and media opportunities.",
     location: "Remote",
     tags: [
       "React",
@@ -47,7 +47,7 @@ export const work_timeline: ITimelineEntry[] = [
     employer: "Culvert Flood Risk Explorer",
     employer_site: "https://www.maps.tnc.org/maine/culvertfloodriskexplorer/",
     description:
-      "Developed visual tool used by The Nature Conservancy for measuring culvert flood risk in Maine.",
+      "Developed a visual tool used by The Nature Conservancy for measuring the flood risk of culverts and the impact on populations in Maine.",
     location: "Remote",
     tags: [
       "React",
@@ -76,7 +76,7 @@ export const work_timeline: ITimelineEntry[] = [
     employer: "The Hub",
     employer_site: "https://www.nature.org/",
     description:
-      "Lead developer migrating infrastructure in data for TNC’s proprietary hub platform from Azure to AWS in a highly available and scalable solution.",
+      "Lead developer migrating infrastructure and workflows for TNC’s proprietary Hub platform from Azure to AWS in a highly available and scalable solution.",
     location: "Remote",
     tags: ["AWS", "Azure", "Terraform", "Angular", ".NET", "Docker"],
   },
@@ -86,7 +86,7 @@ export const work_timeline: ITimelineEntry[] = [
     title: "Software Engineer",
     employer: "Unnamed Telecom Company",
     description:
-      "Developer and co-architect for real-time backend solution capturing and processing nationwide device telemetry data for ISP department.",
+      "Developer and co-architect for a responsive backend solution capturing and processing nationwide device telemetry data in real-time for the ISP department.",
     location: "Remote",
     tags: ["AWS", "Terraform", "NestJS", "Python", "Postgres", "Mapbox GL"],
   },
@@ -97,7 +97,7 @@ export const work_timeline: ITimelineEntry[] = [
     employer: "Orca",
     employer_site: "https://500womenscientists.org/pods-overview",
     description:
-      "Contributor for social platform to connect women and gender-diverse scientists worldwide.",
+      "Contributor for social platform to connect women and gender-diverse in STEMM and organize events and meetings locally.",
     location: "Remote",
     tags: ["React", "AWS", "Sass", "Mapbox GL", "Postgres", "Docker"],
   },
