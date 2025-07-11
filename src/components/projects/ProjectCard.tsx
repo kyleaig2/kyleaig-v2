@@ -3,38 +3,38 @@ import { Inter } from "next/font/google";
 import Link from "next/link";
 import React from "react";
 import CardTag from "../CardTag";
+import { IProject } from "@/content/projects";
 
-export interface ProjectEntryProps {
-  years: [number, number];
-  title: string;
-  link?: string;
-  description: string;
-  tags?: string[];
-}
+export type ProjectCardProps = IProject & { focused: boolean };
 
 const inter = Inter({
   weight: "400",
   subsets: ["latin"],
-})
+});
 
-function ProjectEntry({
+function ProjectCard({
+  id,
   title,
   years,
   link,
   description,
-  tags
-}: ProjectEntryProps) {
+  tags,
+  focused = false,
+}: ProjectCardProps) {
 
   return (
     <div
-      className={`${inter.className} hover:bg-zinc-200/70 dark:hover:bg-zinc-900/80 bg-zinc-200/30 hover:shadow-lg dark:bg-zinc-900/30 transition-all max-w-2xl relative flex flex-col text-sm`}
+      id={id}
+      className={`${inter.className} ${
+        focused ? "dark:bg-zinc-900/80 bg-zinc-200/70 opacity-100" : "opacity-50"
+      } hover:bg-zinc-200/70 dark:hover:bg-zinc-900/80 bg-zinc-200/30 dark:bg-zinc-900/30 hover:shadow-lg transition-all duration-500 max-w-2xl relative flex flex-col text-sm`}
     >
       {/* Header*/}
       <div className="flex justify-between text-zinc-600 dark:text-zinc-200 px-7 pt-5 items-start">
         <div className="flex flex-col">
           <span className="font-bold">{title}</span>
           <span className="text-zinc-700 dark:text-zinc-300">
-            {years[0]} - {years[1]}
+            {Array.isArray(years) ? `${years[0]} - ${years[1]}` : `${years}`}
           </span>
         </div>
         <div className="flex gap-2 items-center">
@@ -65,4 +65,4 @@ function ProjectEntry({
   );
 }
 
-export default ProjectEntry;
+export default ProjectCard;

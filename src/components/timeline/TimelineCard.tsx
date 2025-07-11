@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import Link from "next/link";
 import React from "react";
 import CardTag from "../CardTag";
+import useHashNavigation from "@/hooks/useHashScroll";
 
 export interface ITimelineEntry {
   id: string,
@@ -35,8 +36,11 @@ function TimelineCard({
   focused = false,
 }: TimelineCardProps) {
 
-  const tl_point_classes = `${focused ? "after:shadow-sm after:bg-zinc-800 dark:first:after:bg-zinc-200" : "after:bg-zinc-400 dark:after:bg-zinc-600" } first:after:bg-zinc-800 dark:first:after:bg-zinc-200 after:transition-all after:duration-500 after:absolute after:w-4 after:h-4 dark:after:bg-zinc-300 after:-left-11.5 after:rotate-45 after:z-2`;
-  const more = `${focused ? "last:before:shadow-sm" : "" } last:before:absolute last:before:w-4 last:before:h-4 last:before:bg-zinc-800 dark:last:before:bg-zinc-300 last:before:-left-11.5 last:before:top-full last:before:rotate-45 last:before-top-5`;
+  const activeHash = useHashNavigation();
+
+  const tl_point_classes = `${focused ? "after:shadow-sm after:bg-zinc-800 dark:first:after:bg-zinc-200" : "after:bg-zinc-400 dark:after:bg-zinc-600" } ${activeHash === 'work' ? "first:after:bg-zinc-800 dark:first:after:bg-zinc-200" : "" } after:transition-all after:duration-500 after:absolute after:w-4 after:h-4 dark:after:bg-zinc-300 after:-left-11.5 after:rotate-45 after:z-2`;
+  const more = `${focused ? "last:before:shadow-sm" : "" } ${focused || activeHash === 'work' ? "last:before:bg-zinc-800 dark:last:before:bg-zinc-300" : "last:before:bg-zinc-400 dark:last:before:bg-zinc-600"} last:before:absolute before:transition-all before:duration-500 last:before:w-4 last:before:h-4 last:before:-left-11.5 last:before:top-full last:before:rotate-45 last:before-top-5`;
+
 
   const yearInfo = Array.isArray(years) ? `${years[0]} - ${years[1]}` : years;
 
