@@ -21,8 +21,9 @@ export const projects: IProject[] = [
     id: "prj-chess",
     years: 2021,
     title: "Chess",
+    link: "https://github.com/kyleaig2/Chess",
     description:
-      "Beginner React project taken on to learn the technology and explore Chess move mechanics.",
+      "A beginner React project taken on to learn the technology and explore Chess move mechanics.",
     tags: ["React"],
   },
   {
