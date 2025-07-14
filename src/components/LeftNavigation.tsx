@@ -3,14 +3,15 @@
 import React from "react";
 import { Spectral } from "next/font/google";
 import {
-  ArrowDownLeftIcon,
   CodeBracketIcon,
   EnvelopeIcon,
-  GlobeAltIcon,
   MusicalNoteIcon,
 } from "@heroicons/react/24/outline";
 import classnames from "classnames";
 import useHashNavigation from "@/hooks/useHashScroll";
+import InstaIcon from "./icons/InstaIcon";
+import GithubIcon from "./icons/GithubIcon";
+import { useTheme } from "next-themes";
 
 const header = Spectral({
   weight: "600",
@@ -23,6 +24,13 @@ const subheader = Spectral({
 });
 
 function Hero() {
+  const { resolvedTheme, setTheme } = useTheme();
+
+  const handleThemeToggle = () => {
+    if (resolvedTheme === "light") setTheme("dark");
+    else setTheme("light");
+  };
+  
   return (
     <div className="max-md:mt-24 max-md:mb-8 md:mb-24 animate-appear">
       <header role="banner">
@@ -33,7 +41,7 @@ function Hero() {
           <div className={`${subheader.className} text-2xl text-slate-800 dark:text-zinc-200`}>
             Full Stack Developer
           </div>
-          <CodeBracketIcon className="size-5 text-black animate-pulse dark:text-indigo-300" />
+          <CodeBracketIcon onClick={handleThemeToggle} className="size-5 text-black animate-pulse dark:text-indigo-300 cursor-pointer" />
         </div>
       </header>
       <Contact />
@@ -46,7 +54,7 @@ function Contact() {
     {
       name: "Github",
       href: "https://github.com/kyleaig2",
-      icon: GlobeAltIcon,
+      icon: GithubIcon,
     },
     {
       name: "Email",
@@ -56,11 +64,11 @@ function Contact() {
     {
       name: "Instagram",
       href: "https://instagram.com/aigimoukhuede",
-      icon: ArrowDownLeftIcon,
+      icon: InstaIcon,
     },
     {
       name: "Music",
-      href: "https://untitled.stream/library",
+      href: "https://untitled.stream/library/project/Ive0aeyUPlTx1EEGFw5cQ",
       icon: MusicalNoteIcon,
     },
   ];
@@ -91,10 +99,6 @@ function Links() {
       name: "Home",
       hash: "",
     },
-    // {
-    //   name: "About",
-    //   href: "/#about",
-    // },
     {
       name: "Work",
       hash: "work",
@@ -103,14 +107,6 @@ function Links() {
       name: "Projects",
       hash: "projects",
     },
-    // {
-    //   name: "Gallery",
-    //   hash: "gallery",
-    // },
-    // {
-    //   name: "Contact",
-    //   href: "/contact",
-    // },
     // {
     //   name: "Blog",
     //   href: "/blog",
