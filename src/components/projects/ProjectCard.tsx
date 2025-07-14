@@ -4,6 +4,7 @@ import Link from "next/link";
 import React from "react";
 import CardTag from "../CardTag";
 import { IProject } from "@/content/projects";
+import Image from "next/image";
 
 export type ProjectCardProps = IProject & { focused: boolean };
 
@@ -19,6 +20,7 @@ function ProjectCard({
   link,
   description,
   tags,
+  image_path,
   focused = false,
 }: ProjectCardProps) {
 
@@ -26,8 +28,10 @@ function ProjectCard({
     <div
       id={id}
       className={`${inter.className} ${
-        focused ? "dark:bg-zinc-900/80 bg-zinc-200/70 opacity-100" : "opacity-50"
-      } hover:bg-zinc-200/70 dark:hover:bg-zinc-900/80 bg-zinc-200/30 dark:bg-zinc-900/30 hover:shadow-lg transition-all duration-500 max-w-2xl relative flex flex-col text-sm`}
+        focused
+          ? "dark:bg-zinc-900/80 bg-zinc-200/70 opacity-100"
+          : "opacity-50"
+      } hover:bg-zinc-200/70 dark:hover:bg-zinc-900/80 bg-zinc-200/30 dark:bg-zinc-900/30 hover:shadow-lg transiton-all duration-300 max-w-2xl relative flex flex-col text-sm`}
     >
       {/* Header*/}
       <div className="flex justify-between text-zinc-600 dark:text-zinc-200 px-7 pt-5 items-start">
@@ -48,7 +52,11 @@ function ProjectCard({
       </div>
       {/* Body */}
       <div className="flex px-7 py-5 gap-4">
-        <div className="w-20 h-20 bg-slate-500 dark:bg-indigo-400/50" />
+        {image_path && (
+          <div className="w-16 h-16 relative">
+            <Image alt={title} src={image_path} fill />
+          </div>
+        )}
         <div className="flex-1 dark:text-zinc-300">{description}</div>
       </div>
       {/* Footer */}
