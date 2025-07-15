@@ -6,6 +6,7 @@ import {
   CodeBracketIcon,
   EnvelopeIcon,
   MusicalNoteIcon,
+  PaperClipIcon,
 } from "@heroicons/react/24/outline";
 import classnames from "classnames";
 import useHashNavigation from "@/hooks/useHashScroll";
@@ -69,6 +70,11 @@ function Contact() {
       icon: EnvelopeIcon,
     },
     {
+      name: "Resume",
+      href: "/assets/kyleaig.pdf",
+      icon: PaperClipIcon,
+    },
+    {
       name: "Instagram",
       href: "https://instagram.com/aigimoukhuede",
       icon: InstaIcon,
@@ -88,7 +94,7 @@ function Contact() {
           onClick={handleSocialClick(social.name)}
           aria-label={social.name}
           target="_blank"
-          className="w-fit"
+          className={`w-fit ${social.name === "Resume" ? "lg:hidden" : ""}`}
         >
           <social.icon
             aria-label={social.name}
@@ -115,6 +121,10 @@ function Links() {
       name: "Projects",
       hash: "projects",
     },
+    {
+      name: "Resume",
+      href: "/assets/kyleaig.pdf"
+    }
     // {
     //   name: "Blog",
     //   href: "/blog",
@@ -127,8 +137,8 @@ function Links() {
           return (
             <a
               key={link.name}
-              // href={link.href || `#${link.hash}`}
-              href={`#${link.hash}`}
+              href={link.href || `#${link.hash}`}
+              target={link.href ? "_blank" : undefined}
               className={classnames(
                 "nav-link uppercase text-sm w-fit cursor-pointer",
                 {
