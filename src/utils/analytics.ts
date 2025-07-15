@@ -17,23 +17,23 @@ export const sendThemeToggle = (theme: "light" | "dark") => {
     });
 };
 
-export const sendSocialClick = (social: string) => {
+export const sendSocialClick = (social_name: string) => {
   if (process.env.NODE_ENV === "production")
     sendGAEvent("event", "social_click", {
-      social,
+      social_name,
     });
 };
 
-export const sendProjectClick = (project: string) => {
+export const sendProjectClick = (project_name: string) => {
   if (process.env.NODE_ENV === "production")
     sendGAEvent("event", "project_click", {
-      project,
+      project_name,
     });
 }
 
-export const sendWorkClick = (work: string) => {
+export const sendWorkClick = (work_name: string) => {
   if (process.env.NODE_ENV === "production")
     sendGAEvent("event", "work_click", {
-      work,
+      work_name,
     });
 }
