@@ -12,7 +12,7 @@ export const sendPageView = (page: string) => {
 
 export const sendThemeToggle = (theme: "light" | "dark") => {
   if (process.env.NODE_ENV === "production")
-    sendGAEvent("event", "theme_toggle", {
+    sendGAEvent("event", "theme_selection", {
       theme,
     });
 };
