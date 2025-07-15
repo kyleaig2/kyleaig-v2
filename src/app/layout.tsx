@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "kyleaig",
+  title: "Kyle Aig-Imoukhuede",
   description: "Kyle Aig-Imoukhuede: Full Stack Developer",
 };
 
