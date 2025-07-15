@@ -25,7 +25,7 @@ export const projects: IProject[] = [
     title: "Chess",
     link: "https://github.com/kyleaig2/Chess",
     description:
-      "A beginner React project taken on to learn the technology and explore Chess move mechanics.",
+      "A beginner React project taken on to learn the technology and explore Chess move mechanics inside functional programming.",
     tags: ["React"],
     image_path: '/assets/king.png',
   },
