@@ -22,9 +22,9 @@ export default function Home() {
     <Suspense fallback={null}>
       {/* <ParticlesContainer /> */}
       <Background theme={theme} />
-      <div className="animate-appear flex flex-col md:flex-row justify-between px-8 md:px-12 md:gap-24 lg:gap-36 max-w-6xl m-auto">
+      <div className="animate-appear flex flex-col lg:flex-row justify-between px-8 md:px-12 md:gap-24 lg:gap-36 max-w-6xl m-auto">
         <LeftNavigation />
-        <main role="main" className="flex-1 md:pt-32 w-full">
+        <main role="main" className="flex-1 lg:pt-32 w-full">
           <Landing />
           <Work />
           <Projects />

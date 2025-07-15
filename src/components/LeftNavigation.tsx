@@ -35,7 +35,7 @@ function Hero() {
   };
   
   return (
-    <div className="max-md:mt-24 max-md:mb-8 md:mb-24 animate-appear">
+    <div className="mt-24 mb-8 lg:mb-24 lg:mt-0 animate-appear">
       <header role="banner">
         <div className={`${header.className} text-2xl lg:text-3xl text-zinc-800 dark:text-zinc-200`}>
           Kyle Aig-Imoukhuede
@@ -122,7 +122,7 @@ function Links() {
   ];
 
   return (
-    <nav role="navigation" className="flex flex-col gap-4 text-slate-600 dark:text-zinc-200 max-md:hidden">
+    <nav role="navigation" className="flex-col gap-4 text-slate-600 dark:text-zinc-200 hidden lg:flex">
       {links.map((link) => {
           return (
             <a
@@ -146,7 +146,7 @@ function Links() {
 
 export default function LeftNavigation() {
   return (
-    <div className="md:h-screen md:pt-32 md:sticky md:top-0">
+    <div className="lg:h-screen lg:pt-32 lg:sticky lg:top-0">
       <Hero />
       {/* <Music /> */}
       <Links />

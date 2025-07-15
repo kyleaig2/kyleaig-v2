@@ -61,6 +61,7 @@ function TimelineCard({
       <div className="flex justify-between text-zinc-600 dark:text-zinc-200 px-7 pt-5 items-start">
         <div className="flex flex-col">
           <span className="font-bold">{title}</span>
+          <span className="font-bold sm:hidden">{employer}</span>
           <span className="text-zinc-700 dark:text-zinc-300">{yearInfo}</span>
         </div>
         {employer_site ? (
@@ -71,11 +72,13 @@ function TimelineCard({
             target="_blank"
             className="flex gap-2 items-center"
           >
-            <span className="font-bold">{employer}</span>
-            <ArrowTopRightOnSquareIcon className="size-4 dark:text-indigo-300" />
+            <span className="font-bold max-sm:hidden">{employer}</span>
+            <span>
+              <ArrowTopRightOnSquareIcon className="size-4 dark:text-indigo-300" />
+            </span>
           </Link>
         ) : (
-          <span className="font-bold">{employer}</span>
+          <span className="font-bold max-sm:hidden">{employer}</span>
         )}
       </div>
       {/* Body */}
