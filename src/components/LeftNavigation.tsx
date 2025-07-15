@@ -12,7 +12,7 @@ import useHashNavigation from "@/hooks/useHashScroll";
 import InstaIcon from "./icons/InstaIcon";
 import GithubIcon from "./icons/GithubIcon";
 import { useTheme } from "next-themes";
-import Music from "./Music";
+// import Music from "./Music";
 
 const header = Spectral({
   weight: "600",
@@ -141,7 +141,7 @@ export default function LeftNavigation() {
   return (
     <div className="md:h-screen md:pt-32 md:sticky md:top-0">
       <Hero />
-      <Music />
+      {/* <Music /> */}
       <Links />
     </div>
   );
