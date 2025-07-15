@@ -6,7 +6,7 @@ import CardTag from "../CardTag";
 import { IProject } from "@/content/projects";
 import Image from "next/image";
 
-export type ProjectCardProps = IProject & { focused: boolean };
+export type ProjectCardProps = IProject & { focused: boolean, handleLinkClick: (project: string) => void };
 
 const inter = Inter({
   weight: "400",
@@ -22,7 +22,13 @@ function ProjectCard({
   tags,
   image_path,
   focused = false,
+  ...props
 }: ProjectCardProps) {
+
+  const handleLinkClick = (project: string) => (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.stopPropagation();
+    props.handleLinkClick(project);
+  }
 
   return (
     <div
@@ -44,7 +50,7 @@ function ProjectCard({
         <div className="flex gap-2 items-center">
           {/* <span className="font-semibold">{employer}</span> */}
           {link && (
-            <Link href={link} aria-label={title} target="_blank">
+            <Link href={link} onClick={handleLinkClick(title)} aria-label={title} target="_blank">
               <ArrowTopRightOnSquareIcon className="size-4 dark:text-indigo-300" />
             </Link>
           )}

@@ -12,7 +12,7 @@ import useHashNavigation from "@/hooks/useHashScroll";
 import InstaIcon from "./icons/InstaIcon";
 import GithubIcon from "./icons/GithubIcon";
 import { useTheme } from "next-themes";
-import { sendThemeToggle } from "@/utils/analytics";
+import { sendSocialClick, sendThemeToggle } from "@/utils/analytics";
 // import Music from "./Music";
 
 const header = Spectral({
@@ -53,6 +53,10 @@ function Hero() {
 }
 
 function Contact() {
+  const handleSocialClick = (social: string) => (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.stopPropagation();
+    sendSocialClick(social);
+  }
   const socials = [
     {
       name: "Github",
@@ -81,6 +85,7 @@ function Contact() {
         <a
           key={social.name}
           href={social.href}
+          onClick={handleSocialClick(social.name)}
           aria-label={social.name}
           target="_blank"
           className="w-fit"

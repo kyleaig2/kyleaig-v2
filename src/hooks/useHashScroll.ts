@@ -12,8 +12,7 @@ export default function useHashNavigation() {
    * Google Analytics Page View Capture
    */
   useEffect(() => {
-    if (process.env.NODE_ENV === "production")
-      sendPageView(activeHash);
+    sendPageView(activeHash);
   }, [activeHash]);
 
   useEffect(() => {

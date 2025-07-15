@@ -18,6 +18,7 @@ export interface ITimelineEntry {
 
 export type TimelineCardProps = ITimelineEntry & {
   focused: boolean;
+  handleLinkClick: (work: string) => void
 };
 
 const inter = Inter({
@@ -34,13 +35,18 @@ function TimelineCard({
   description,
   tags,
   focused = false,
+  ...props
 }: TimelineCardProps) {
 
   const activeHash = useHashNavigation();
 
+  const handleLinkClick = (work: string) => (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.stopPropagation();
+    props.handleLinkClick(work);
+  }
+
   const tl_point_classes = `${focused ? "after:shadow-sm after:bg-zinc-800 dark:first:after:bg-zinc-200" : "after:bg-zinc-400 dark:after:bg-zinc-600" } ${activeHash === 'work' ? "first:after:bg-zinc-800 dark:first:after:bg-zinc-200" : "" } after:transition-all after:duration-300 after:absolute after:w-4 after:h-4 dark:after:bg-zinc-300 after:-left-11.5 after:rotate-45 after:z-2`;
   const more = `${focused ? "last:before:shadow-sm" : "" } ${focused || activeHash === 'work' ? "last:before:bg-zinc-800 dark:last:before:bg-zinc-300" : "last:before:bg-zinc-400 dark:last:before:bg-zinc-600"} last:before:absolute before:transition-all before:duration-300 last:before:w-4 last:before:h-4 last:before:-left-11.5 last:before:top-full last:before:rotate-45 last:before-top-5`;
-
 
   const yearInfo = Array.isArray(years) ? `${years[0]} - ${years[1]}` : years;
 
@@ -60,6 +66,7 @@ function TimelineCard({
         {employer_site ? (
           <Link
             href={employer_site}
+            onClick={handleLinkClick(id)}
             aria-label={employer}
             target="_blank"
             className="flex gap-2 items-center"
