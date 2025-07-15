@@ -12,6 +12,7 @@ import useHashNavigation from "@/hooks/useHashScroll";
 import InstaIcon from "./icons/InstaIcon";
 import GithubIcon from "./icons/GithubIcon";
 import { useTheme } from "next-themes";
+import { sendThemeToggle } from "@/utils/analytics";
 // import Music from "./Music";
 
 const header = Spectral({
@@ -28,8 +29,9 @@ function Hero() {
   const { resolvedTheme, setTheme } = useTheme();
 
   const handleThemeToggle = () => {
-    if (resolvedTheme === "light") setTheme("dark");
-    else setTheme("light");
+    const newTheme = resolvedTheme === "light" ? "dark" : "light";
+    setTheme(newTheme);
+    sendThemeToggle(newTheme);
   };
   
   return (

@@ -8,3 +8,9 @@ export const sendPageView = (page: string) => {
     page_path: `/#${p}`,
   });
 };
+
+export const sendThemeToggle = (theme: "light" | "dark") => {
+  sendGAEvent("event", "theme_toggle", {
+    theme,
+  });
+};
