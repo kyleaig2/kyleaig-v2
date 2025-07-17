@@ -27,7 +27,7 @@ export const work_timeline: ITimelineEntry[] = [
     employer: "Gage Platform",
     employer_site: "https://gage.500womenscientists.org",
     description:
-      "Contributor for a social platform developed to connect women and gender-diverse individuals in STEMM worldwide for work, research, and media opportunities.",
+      "Contributor for a social networking platform developed to connect women and gender-diverse individuals in STEMM worldwide for work, research, and media opportunities.",
     location: "Remote",
     tags: [
       "React",
@@ -97,7 +97,7 @@ export const work_timeline: ITimelineEntry[] = [
     employer: "Orca",
     employer_site: "https://500womenscientists.org/pods-overview",
     description:
-      "Contributor for social platform to connect women and gender-diverse individuals in STEMM and organize events and meetings locally.",
+      "Contributor for a social networking platform to connect women and gender-diverse individuals in STEMM and organize events and meetings locally.",
     location: "Remote",
     tags: ["React", "AWS", "Sass", "Mapbox GL", "Postgres", "Docker"],
   },
